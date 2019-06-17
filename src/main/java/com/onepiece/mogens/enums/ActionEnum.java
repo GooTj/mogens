@@ -2,6 +2,9 @@ package com.onepiece.mogens.enums;
 
 import lombok.Getter;
 
+/**
+ * 动作enum
+ */
 @Getter
 public enum ActionEnum {
     /** 单次发送短信.*/

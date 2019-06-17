@@ -1,0 +1,21 @@
+CREATE TABLE sms_info(
+    ID VARCHAR(32) NOT NULL   COMMENT '主键 对应阿里云的外部流水号' ,
+    TEMPLATE VARCHAR(32)    COMMENT '模板ID' ,
+    biz_id VARCHAR(32)    COMMENT '阿里云发送回执ID' ,
+    request_id VARCHAR(32)    COMMENT '阿里云请求ID' ,
+    phone VARCHAR(32)    COMMENT '接收者手机号' ,
+    info VARCHAR(1024)    COMMENT '内容' ,
+    status tinyint(3) not null default 1  COMMENT '默认为1，状态 发送请求-1，请求成功-2，请求失败-3，用户接收成功-4，用户接收失败-5' ,
+    template_code VARCHAR(32)    COMMENT '模板号' ,
+    sign_name VARCHAR(32)    COMMENT '签名' ,
+    code VARCHAR(32)    COMMENT '请求状态码' ,
+    message VARCHAR(32)    COMMENT '请求状态码描述' ,
+    err_code VARCHAR(32)    COMMENT '回执状态码' ,
+    err_msg VARCHAR(32)    COMMENT '回执状态码描述 失败信息' ,
+    sms_size VARCHAR(32)    COMMENT '短信长度' ,
+    CREATED_BY VARCHAR(32)    COMMENT '创建人 服务名' ,
+    UPDATED_BY VARCHAR(32)    COMMENT '更新人' ,
+    create_time timestamp not null default current_timestamp comment '创建时间',
+	  update_time timestamp not null default current_timestamp on update current_timestamp comment '更新时间',
+    PRIMARY KEY (ID)
+) COMMENT = '短信信息表';/*SQL@Run*/
