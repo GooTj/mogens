@@ -32,7 +32,7 @@ public class SendSmsService {
     ALiConfig aLiConfig;
 
     /**
-     *
+     * 发送短信，todo 群发及查询复写
      * @return
      */
     public SendSmsResult sendSms() {
@@ -44,8 +44,8 @@ public class SendSmsService {
         parameter.put("TemplateCode", "SMS_158036625");
         parameter.put("TemplateParam", "{\"code\":\"1111\"}");
 
-//        parameter.put("SmsUpExtendCode", "上行短信扩展码，无特殊需要此字段的用户请忽略此字段");
-//        parameter.put("OutId", "外部流水扩展字段");
+//      parameter.put("SmsUpExtendCode", "上行短信扩展码，无特殊需要此字段的用户请忽略此字段");
+//      parameter.put("OutId", "外部流水扩展字段");
 
         String result=this.send(aciton, parameter);
         SendSmsResult sendSmsResult=gson.fromJson(result, SendSmsResult.class);
