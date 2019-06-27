@@ -1,7 +1,0 @@
-spring:
-  application:
-    name: mogens
-
-server:
-  port: 8902
-

@@ -8,6 +8,7 @@ import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.stereotype.Component;
 
 /**
+ * 监听者
  * @author Goo Tsung-jen
  * @create 2019-06-19  11:28
  * Innovation distinguishes between a leader and a follower.

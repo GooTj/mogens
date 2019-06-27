@@ -2,7 +2,9 @@ package com.onepiece.mogens.config;
 
 import lombok.Data;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.stereotype.Component;
 
 /**
  * @author Goo Tsung-jen
@@ -10,6 +12,8 @@ import org.springframework.context.annotation.Configuration;
  * Innovation distinguishes between a leader and a follower.
  */
 @Configuration
+//@Component
+//@ConfigurationProperties("aliyun")
 @Data
 public class ALiConfig {
     /** 主账号AccessKey的ID.*/

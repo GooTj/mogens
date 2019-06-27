@@ -1,5 +1,10 @@
 package com.onepiece.mogens.controller;
 
+import com.onepiece.mogens.config.ALiConfig;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -11,7 +16,25 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 @RequestMapping("/send")
+@RefreshScope
 public class SendController {
+    @Autowired
+    ALiConfig aLiConfig;
+
+    @Value("${aliyun.regionId}")
+    private  String a;
+
+    @GetMapping("/test")
+    public String test() {
+
+
+
+        return "========原来是default========="+aLiConfig.getRegionId()+"================="+a;
+
+    }
+
+
+
      //此controller分为以下几个方法
     /**
      * 1.发送短信
@@ -30,4 +53,6 @@ public class SendController {
     /**
      *3.批量查询
      */
+
+
 }
