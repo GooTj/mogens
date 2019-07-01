@@ -39,7 +39,7 @@ public class SendController {
     /**
      * 1.发送短信
      * 服务调用者
-     * 短信唯一标示（主键）独立服务？
+     * 短信唯一标示（主键）独立服务
      *
      */
 //    @PostMapping("/sms")
@@ -47,11 +47,12 @@ public class SendController {
 
 
     /**
-     * 2.查询某一条短信
+     * 2.根据ip查询某一条短信
      */
 
+
     /**
-     *3.批量查询
+     *3.根据调用者批量查询
      */
 
 

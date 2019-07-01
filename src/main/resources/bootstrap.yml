@@ -1,0 +1,44 @@
+spring:
+  application:
+    name: mogens
+  cloud:
+    config:
+      discovery:
+        enabled: true #开启配置信息发现
+        service-id: SANJI
+      profile: dev
+      password: EJpdFIgeq3fi2v9F
+      username: sanji
+      name: mogens #获取配置文件的名称
+
+server:
+  port: 8902
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://39.106.71.119:8761/eureka/
+#  instance:
+#    ip-address: localhost #39.106.71.119 #决定Eureka服务显示host
+#    hostname: ${eureka.instance.ip-address} #决定服务跳转host，必须指定
+#    prefer-ip-address: false #不设可自己指定，true会自动获取本地ipv4地址
+#    instance-id: ${spring.cloud.client.ip-address}:${spring.application.name}:${server.port}
+
+#management:
+#  endpoint:
+#    bus-refresh:
+#      enabled: true
+
+#  endpoints:
+#    web:
+#      exposure:
+#        include: "bus-refresh"
+#  instance:
+#    instance-id: ${spring.cloud.client.ip-address}:${spring.application.name}:${server.port}
+#    prefer-ip-address: true
+
+
+#  management.endpoints.web.exposure.include=refresh
+#  spring.cloud.config.failFast=true
+#  spring.cloud.bus.trace.enabled = true
+
